@@ -1,0 +1,13 @@
+# Enable random spawns?
+random-spawn:
+  enabled: false
+  radius: 10
+# spawn location - used as center point for finding random spawn if enabled
+spawn:
+  ==: org.bukkit.Location
+  world: world
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  pitch: 0.0
+  yaw: 0.0

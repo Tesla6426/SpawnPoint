@@ -1,0 +1,24 @@
+name: SpawnPoint
+version: '${project.version}'
+main: net.txsla.spawnpoint.SpawnPoint
+api-version: '1.21'
+
+permissions :
+  setspawn.permission:
+    description: "Allows player to set the server spawn"
+    default-permission: false
+    default: op
+
+commands:
+  setspawn:
+    description: "Sets the server spawnpoint"
+    usage: "/setspawn [x,y,z]"
+    aliases: []
+    permission: setspawn.permission
+    permission-message: "You do not have permission to use this command"
+  getspawn:
+    description: "Returns spawn point information"
+    usage: "/getspawn"
+    aliases: []
+    permission: setspawn.permission
+    permission-message: "You do not have permission to use this command"
