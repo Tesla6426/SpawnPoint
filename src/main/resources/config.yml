@@ -1,6 +1,6 @@
 # Enable random spawns?
 random-spawn:
-  enabled: false
+  enable: false
   radius: 10
 # spawn location - used as center point for finding random spawn if enabled
 spawn:
