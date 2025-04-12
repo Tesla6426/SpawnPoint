@@ -42,6 +42,7 @@ public class SetSpawn implements CommandExecutor, TabExecutor {
         SpawnPoint.spawn.set(coords[0], coords[1], coords[2]);
         SpawnPoint.spawn.setYaw(Objects.requireNonNull(sender.getServer().getPlayer(sender.getName())).getYaw());
         SpawnPoint.spawn.setPitch(Objects.requireNonNull(sender.getServer().getPlayer(sender.getName())).getPitch());
+        SpawnPoint.spawn.setWorld(Objects.requireNonNull(sender.getServer().getPlayer(sender.getName())).getWorld());
         plugin.getConfig().set("spawn", SpawnPoint.spawn);
         plugin.saveConfig();
         return true;

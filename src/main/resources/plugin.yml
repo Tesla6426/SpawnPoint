@@ -4,21 +4,31 @@ main: net.txsla.spawnpoint.SpawnPoint
 api-version: '1.21'
 
 permissions :
-  setspawn.permission:
+  spawnpoint.setspawn:
     description: "Allows player to set the server spawn"
     default-permission: false
     default: op
+  spawnpoint.spawn:
+    description: "Allows player to set the server spawn"
+    default-permission: true
+    default: not op
 
 commands:
   setspawn:
     description: "Sets the server spawnpoint"
     usage: "/setspawn [x,y,z]"
     aliases: []
-    permission: setspawn.permission
+    permission: spawnpoint.setspawn
     permission-message: "You do not have permission to use this command"
   getspawn:
     description: "Returns spawn point information"
     usage: "/getspawn"
     aliases: []
-    permission: setspawn.permission
+    permission: spawnpoint.setspawn
+    permission-message: "You do not have permission to use this command"
+  spawn:
+    description: "Teleports player to spawn"
+    usage: "/spawn"
+    aliases: [ ]
+    permission: spawnpoint.spawn
     permission-message: "You do not have permission to use this command"
