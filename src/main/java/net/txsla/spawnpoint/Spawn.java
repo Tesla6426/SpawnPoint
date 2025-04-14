@@ -14,8 +14,6 @@ import java.util.List;
 import static net.txsla.spawnpoint.SpawnPoint.spawn;
 
 public class Spawn implements CommandExecutor, TabExecutor {
-    private final SpawnPoint plugin;
-    public Spawn(SpawnPoint plugin) { this.plugin = plugin; }
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         Player player = (Player) commandSender;

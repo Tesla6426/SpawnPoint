@@ -25,6 +25,7 @@ public final class SpawnPoint extends JavaPlugin {
             radius = getConfig().getDouble("random-spawn.radius");
         }
 
+        getCommand("spawn").setExecutor(new Spawn() );
         getCommand("setspawn").setExecutor(new SetSpawn(this) );
         getCommand("getspawn").setExecutor(new GetSpawn(this) );
     }
